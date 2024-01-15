@@ -16,7 +16,7 @@ Scott Estrada |	Developer            |	scott-estrada-developer.jpg
 Barbara Ramos |	Graphic Designer     |	barbara-ramos-graphic-designer.jpg
 */
 
-//^ Array di oggetti
+//& Array di oggetti
 
 const teamMembers = [
     {
@@ -51,6 +51,29 @@ const teamMembers = [
     }
 ]
 
+
+//& Recupero elementi necessari 
+const card = document.querySelectorAll(".col");
+const info = document.querySelectorAll(".info");
+const printName = document.querySelectorAll(".name")
+const printRole = document.querySelectorAll(".role")
+
+
 //TODO stampa in pagina (seguendo lo schema impostato in html)
+// per inserire immagine per prima -> prependChild
+
+for(let i = 0; i < teamMembers.length; i++) {
+    const currentName = teamMembers[i]["name"]; 
+    const currentRole = teamMembers[i]["role"]; 
+    console.log("Nome: ", currentName);
+    console.log("Ruolo: ", currentRole);
+
+    printName[i].innerHTML = currentName;
+    printRole[i].innerHTML = currentRole;
+    
+}
+
+console.log(printName)
+console.log(printRole)
 
 //TODO trasforma stringa img in immagine effettiva
