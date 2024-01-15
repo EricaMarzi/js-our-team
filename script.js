@@ -22,58 +22,58 @@ const teamMembers = [
     {
         name: "Wayne Barnett",
         role: "Founder & CEO",
-        img: "wayne-barnett-founder-ceo.jpg"
+        img: "<img src='img/wayne-barnett-founder-ceo.jpg' alt='Barnett'>"
     },
     {
         name: "Angela Caroll",
         role: "Chief Editor ",
-        img: "angela-caroll-chief-editor.jpg"
+        img: "<img src='img/angela-caroll-chief-editor.jpg' alt='Caroll'>"
     },
     {
         name: "Walter Gordon",
         role: "Office Manager ",
-        img: "walter-gordon-office-manager.jpg"
+        img: "<img src='img/walter-gordon-office-manager.jpg' alt='Gordon'>"
     },
     {
         name: "Angela Lopez",
         role: "Social Media Manager",
-        img: "angela-lopez-social-media-manager.jpg"
+        img: "<img src='img/angela-lopez-social-media-manager.jpg' alt='Lopez'>"
     },
     {
         name: "Scott Estrada",
         role: "Developer",
-        img: "scott-estrada-developer.jpg"
+        img: "<img src='img/scott-estrada-developer.jpg' alt='Estrada'>"
     },
     {
         name: "Barbara Ramos",
         role: "Graphic Designer",
-        img: "barbara-ramos-graphic-designer.jpg"
+        img: "<img src='img/barbara-ramos-graphic-designer.jpg' alt='Ramos'>"
     }
 ]
 
 
 //& Recupero elementi necessari 
-const card = document.querySelectorAll(".col");
-const info = document.querySelectorAll(".info");
-const printName = document.querySelectorAll(".name")
-const printRole = document.querySelectorAll(".role")
+const printName = document.querySelectorAll(".name");
+const printRole = document.querySelectorAll(".role");
+const printImg = document.querySelectorAll(".img")
 
 
-//TODO stampa in pagina (seguendo lo schema impostato in html)
-// per inserire immagine per prima -> prependChild
+//& Stampa in pagina + img
 
 for(let i = 0; i < teamMembers.length; i++) {
     const currentName = teamMembers[i]["name"]; 
     const currentRole = teamMembers[i]["role"]; 
+    const currentImg = teamMembers[i]["img"];
+    
     console.log("Nome: ", currentName);
     console.log("Ruolo: ", currentRole);
+    console.log("Url img: ", currentImg);
+    console.log("______________________________");
+
 
     printName[i].innerHTML = currentName;
     printRole[i].innerHTML = currentRole;
+    printImg[i].innerHTML = currentImg;
+
     
 }
-
-console.log(printName)
-console.log(printRole)
-
-//TODO trasforma stringa img in immagine effettiva
