@@ -77,7 +77,8 @@ for(let i = 0; i < teamMembers.length; i++) {
                                 <div class="name">${currentName}</div>
                                 <div class="role">${currentRole}</div>
                             </div>
-                        </div>`
+                        </div>
+    </div>`
 }
 
 row.innerHTML = items;
