@@ -22,44 +22,43 @@ const teamMembers = [
     {
         name: "Wayne Barnett",
         role: "Founder & CEO",
-        img: "<img src='img/wayne-barnett-founder-ceo.jpg' alt='Barnett'>"
+        img: "wayne-barnett-founder-ceo.jpg"
     },
     {
         name: "Angela Caroll",
         role: "Chief Editor ",
-        img: "<img src='img/angela-caroll-chief-editor.jpg' alt='Caroll'>"
+        img: "angela-caroll-chief-editor.jpg"
     },
     {
         name: "Walter Gordon",
         role: "Office Manager ",
-        img: "<img src='img/walter-gordon-office-manager.jpg' alt='Gordon'>"
+        img: "walter-gordon-office-manager.jpg"
     },
     {
         name: "Angela Lopez",
         role: "Social Media Manager",
-        img: "<img src='img/angela-lopez-social-media-manager.jpg' alt='Lopez'>"
+        img: "angela-lopez-social-media-manager.jpg"
     },
     {
         name: "Scott Estrada",
         role: "Developer",
-        img: "<img src='img/scott-estrada-developer.jpg' alt='Estrada'>"
+        img: "scott-estrada-developer.jpg"
     },
     {
         name: "Barbara Ramos",
         role: "Graphic Designer",
-        img: "<img src='img/barbara-ramos-graphic-designer.jpg' alt='Ramos'>"
+        img: "barbara-ramos-graphic-designer.jpg"
     }
 ]
 
 
 //& Recupero elementi necessari 
-const printName = document.querySelectorAll(".name");
-const printRole = document.querySelectorAll(".role");
-const printImg = document.querySelectorAll(".img")
+const row = document.querySelector(".row");
+
 
 
 //& Stampa in pagina + img
-
+let items = ``;
 for(let i = 0; i < teamMembers.length; i++) {
     const currentName = teamMembers[i]["name"]; 
     const currentRole = teamMembers[i]["role"]; 
@@ -70,10 +69,17 @@ for(let i = 0; i < teamMembers.length; i++) {
     console.log("Url img: ", currentImg);
     console.log("______________________________");
 
-
-    printName[i].innerHTML = currentName;
-    printRole[i].innerHTML = currentRole;
-    printImg[i].innerHTML = currentImg;
-
-    
+    items += `
+    <div class="col">
+                       <div class="card">
+                            <img src="img/${currentImg}" alt="${currentName}">
+                            <div class="info">
+                                <div class="name">${currentName}</div>
+                                <div class="role">${currentRole}</div>
+                            </div>
+                        </div>`
 }
+
+row.innerHTML = items;
+
+
