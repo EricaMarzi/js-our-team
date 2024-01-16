@@ -71,13 +71,13 @@ for(let i = 0; i < teamMembers.length; i++) {
 
     items += `
     <div class="col">
-                       <div class="card">
-                            <img src="img/${currentImg}" alt="${currentName}">
-                            <div class="info">
-                                <div class="name">${currentName}</div>
-                                <div class="role">${currentRole}</div>
-                            </div>
-                        </div>
+        <div class="card">
+            <img src="img/${currentImg}" alt="${currentName}">
+            <div class="info">
+                <div class="name">${currentName}</div>
+                <div class="role">${currentRole}</div>
+            </div>
+        </div>
     </div>`
 }
 
